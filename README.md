@@ -3,5 +3,3 @@
 前后端分离
 
 ## 架构
-
-Springboot+vue+springMVC+mybaites
