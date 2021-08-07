@@ -1,0 +1,13 @@
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8082/eureka
+  instance:
+    prefer-ip-address: true #使用本地地址
+    ip-address: 127.0.0.1
+
+spring:
+  application:
+    name: eureka-server1
