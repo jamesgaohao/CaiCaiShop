@@ -8,39 +8,22 @@ eureka:
     prefer-ip-address: true
     ip-address: 127.0.0.1
 spring:
-  main:
-    allow-bean-definition-overriding: true
   application:
     name: GateWay
+
 zuul:
-  routes:
-    ueser-service: /ueser/** # 简化编写：key 服务ID V：过滤路径 http://localhost:10010/uservice/user/16
-      #strip-prefix: false #全局过滤前缀 只针对prefix: /api.对ueser-service 无效
-      #局部过滤前缀
-      #ueser-service:
-      # path: /user/**
-      #serviceId: user-service
-      #strip-prefix: false #http://localhost:10010/user/16
-      #caicai: #路由ID，随便定义
-      #path: /user-service/**
-    #serviceId: user-service
-  #不对外暴露的服务
-  # ignored-services:
-  #  - user-service
-  #  - user-service2
-  #prefix: /api
-  prefix: /api #添加路由前缀
-
-ribbon:
-  ReadTimeout: 60000 #ribbon超时时长
-  ConnectTimeout: 60000 # ribbon读取超时时长
-  MaxAutoRetries: 0  # 当前服务重试次数
-  MaxAutoRetriesNextServer: 0 # 切换服务重试次数
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMillisecond: 990000 # 熔断超时时长：6000ms
+  prefix: /api
+#
+#ribbon:
+#  ReadTimeout: 60000 #ribbon超时时长
+#  ConnectTimeout: 60000 # ribbon读取超时时长
+#  MaxAutoRetries: 0  # 当前服务重试次数
+#  MaxAutoRetriesNextServer: 0 # 切换服务重试次数
+#
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMillisecond: 990000 # 熔断超时时长：6000ms
