@@ -13,17 +13,17 @@ spring:
 
 zuul:
   prefix: /api
-#
-#ribbon:
-#  ReadTimeout: 60000 #ribbon超时时长
-#  ConnectTimeout: 60000 # ribbon读取超时时长
-#  MaxAutoRetries: 0  # 当前服务重试次数
-#  MaxAutoRetriesNextServer: 0 # 切换服务重试次数
-#
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMillisecond: 990000 # 熔断超时时长：6000ms
+
+ribbon:
+  ReadTimeout: 60000 #ribbon超时时长
+  ConnectTimeout: 60000 # ribbon读取超时时长
+  MaxAutoRetries: 0  # 当前服务重试次数
+  MaxAutoRetriesNextServer: 0 # 切换服务重试次数
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMillisecond: 990000 # 熔断超时时长：6000ms
