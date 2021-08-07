@@ -13,6 +13,8 @@ spring:
 
 zuul:
   prefix: /api
+  routes:
+    product-service: /item/**
 
 ribbon:
   ReadTimeout: 60000 #ribbon超时时长
