@@ -1,0 +1,18 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: product-service
+  datasource:
+    url:  jdbc:mysql://localhost:3306/CPshop
+    username: root
+    password: 123456
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+
+  client:
+    service-url:
+      defaultZone: http://localhost:8082/eureka/
