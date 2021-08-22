@@ -3,6 +3,8 @@ package top.caicai.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
+import top.caicai.common.enums.ExceptionEnum;
+import top.caicai.common.exception.CpException;
 import top.caicai.item.po.Category;
 import top.caicai.mapper.CategoryMapper;
 
@@ -20,8 +22,8 @@ public class ItemCategoryService {
         List<Category> list = categoryMapper.select(category);
         //判断结果是否为空
         if(CollectionUtils.isEmpty(list)){
-//           throw new CpException(ExceptionEnum.CATEGORY_NOT_NULL);
-            System.out.println("没查询到结果" );
+           throw new CpException(ExceptionEnum.CATEGORY_NOT_NULL);
+//            System.out.println("没查询到结果" );
 
         }
         return list;

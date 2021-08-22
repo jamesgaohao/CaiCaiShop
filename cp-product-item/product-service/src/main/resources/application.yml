@@ -17,3 +17,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8082/eureka/
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  #配置打印sql语句
