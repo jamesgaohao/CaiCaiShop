@@ -1,0 +1,32 @@
+server:
+  port: 10011
+spring:
+  application:
+    name: upload-service
+  servlet:
+    multipart:
+      max-file-size: 10Mb #限制文件上传大小
+      enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8082/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+
+fdfs:
+  connect-timeout: 1501
+  so-timeout: 2500
+  thumb-image:
+    height: 60
+    width: 60
+  tracker-list:
+    - 192.168.197.125:22122
+cp:
+  upload:
+    baseUrl: http://image.caicai.top/
+    allowType:
+      - image/jpeg
+      - image/png
+      - image/jpg

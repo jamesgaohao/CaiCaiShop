@@ -19,7 +19,6 @@ public class CommonExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ExceptionResult> handleException(CpException e){
         return ResponseEntity.status(e.getExceptionEnums().getCode()).body(new ExceptionResult(e.getExceptionEnums()));
-//        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
 
     }
 
