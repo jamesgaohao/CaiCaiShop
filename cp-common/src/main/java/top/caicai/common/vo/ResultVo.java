@@ -8,13 +8,13 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /*
-* 通用结果返货对象
+* 通用结果返回对象
 *
 * */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ResultVo {
+public class ResultVo<T> implements Serializable{
 
     private String Msg;//结果
 
@@ -22,6 +22,6 @@ public class ResultVo {
 
     private String code;//状态码
 
-    private String Date;//返回结果集
+    private T Date;//返回结果集
 
 }
